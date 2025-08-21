@@ -15,7 +15,6 @@ public class Bai1Bai2 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
 
-        // Hello
         PrintWriter out = resp.getWriter();
         out.println("<html><body>");
         out.println("<h1 style=\"color: red;\">" + "Bai 1 & Bai 2" + "</h1>");

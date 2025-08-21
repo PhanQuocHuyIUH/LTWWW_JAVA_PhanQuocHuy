@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2f3c46;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #444f59;
+            padding: 30px;
+            border-radius: 8px;
+            width: 400px;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .required {
+            color: red;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background: #fff;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #ddd;
+        }
+
+        .name-fields {
+            display: flex;
+            gap: 10px;
+        }
+
+        .name-fields input {
+            flex: 1;
+        }
+
+        small {
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Register</h2>
+    <form action="bai5" method="post">
+
+        <label>Name <span class="required">*</span></label>
+        <div class="name-fields">
+            <input type="text" name="firstName" placeholder="First" required>
+            <input type="text" name="lastName" placeholder="Last" required>
+        </div>
+
+        <label>Username</label>
+        <input type="text" name="username">
+
+        <label>E-mail <span class="required">*</span></label>
+        <input type="email" name="email" required>
+
+        <label>Password <span class="required">*</span></label>
+        <input type="password" name="password" required>
+
+        <label>Facebook</label>
+        <input type="url" name="facebook" placeholder="Enter your Facebook profile URL">
+
+        <label>Short Bio</label>
+        <textarea name="bio" rows="3" placeholder="Share a little information about yourself."></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

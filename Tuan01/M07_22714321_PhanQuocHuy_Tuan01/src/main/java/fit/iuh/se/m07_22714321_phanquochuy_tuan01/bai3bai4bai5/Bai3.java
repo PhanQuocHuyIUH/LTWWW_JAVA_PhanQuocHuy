@@ -12,8 +12,8 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "bai3", value = "/bai3")
 public class Bai3 extends HttpServlet {
-
     private User u;
+
     @Override
     public void init(ServletConfig config) throws ServletException {
         u = new User("u01", "u@01", "u01@gmail.com", 21, "123456789");
@@ -23,7 +23,6 @@ public class Bai3 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");
 
-        // Hello
         PrintWriter out = resp.getWriter();
         out.println(u.toJson());
     }

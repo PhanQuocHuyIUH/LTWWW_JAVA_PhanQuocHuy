@@ -3,4 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+    <context-param>
+        <param-name>demoUserJson</param-name>
+        <param-value>{"username":"u01","password":"u@01","email":"u01@gmail.com","age":21,"phone":"123456789"}</param-value>
+    </context-param>
 </web-app>
