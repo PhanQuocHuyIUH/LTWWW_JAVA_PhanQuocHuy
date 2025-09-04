@@ -14,8 +14,8 @@
 <br/>
 <a href="bai1">Bai 1</a>
 <br/>
-<%--<a href="bai2">Bai 2</a>--%>
-<%--<br/>--%>
+<a href="bai2">Bai 2</a>
+<br/>
 <%--<a href="bai3">Bai 3</a>--%>
 <%--<br/>--%>
 <%--<a href="bai4">Bai 4</a>--%>
