@@ -1,4 +1,4 @@
-package iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.model;
+package iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai3;
 
 import lombok.Data;
 
