@@ -3,6 +3,7 @@ package iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.controllers;
 import iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.daos.ProductDAO;
 import iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.daos.impl.ProductDAOImpl;
 import iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.entities.ItemCart;
+
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -82,9 +83,9 @@ public class CartController extends HttpServlet {
         resp.sendRedirect("cart");
     }
 
-    private int findProductIndex(int id, List<ItemCart> cart) {
+    private Integer findProductIndex(Integer id, List<ItemCart> cart) {
         for (int i = 0; i < cart.size(); i++) {
-            if (cart.get(i).getProduct().getId() == id) {
+            if (cart.get(i).getProduct().getId().equals(id)) {
                 return i;
             }
         }

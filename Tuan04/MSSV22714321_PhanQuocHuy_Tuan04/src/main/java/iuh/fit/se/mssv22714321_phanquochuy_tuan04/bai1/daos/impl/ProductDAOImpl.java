@@ -2,6 +2,7 @@ package iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.daos.impl;
 
 import iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.daos.ProductDAO;
 import iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.entities.Product;
+import jakarta.annotation.Resource;
 
 import java.sql.Connection;
 
@@ -12,9 +13,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDAOImpl implements iuh.fit.se.mssv22714321_phanquochuy_tuan04.bai1.daos.ProductDAO {
+public class ProductDAOImpl implements ProductDAO {
     private final DataSource datasource;
-
     public ProductDAOImpl(DataSource datasource) {
         this.datasource = datasource;
     }
@@ -30,9 +30,9 @@ public class ProductDAOImpl implements iuh.fit.se.mssv22714321_phanquochuy_tuan0
                 ResultSet rs = ps.executeQuery();
         ) {
             while (rs.next()) {
-                int id = rs.getInt("id");
+                Integer id = (Integer) rs.getInt("id");
                 String name = rs.getString("name");
-                Double price = rs.getDouble("price");
+                Double price = (Double) rs.getDouble("price");
                 String image = rs.getString("image");
                 list.add(new Product(id, name, price,image));
             }
@@ -43,7 +43,7 @@ public class ProductDAOImpl implements iuh.fit.se.mssv22714321_phanquochuy_tuan0
     }
 
     @Override
-    public Product getById(int id) {
+    public Product getById(Integer id) {
 
         String sql = "SELECT id, name, price, image FROM product WHERE id=?";
         Product p = null;
@@ -55,7 +55,7 @@ public class ProductDAOImpl implements iuh.fit.se.mssv22714321_phanquochuy_tuan0
             try (ResultSet rs = ps.executeQuery();) {
                 while (rs.next()) {
                     String name = rs.getString("name");
-                    Double price = rs.getDouble("price");
+                    Double price = (Double) rs.getDouble("price");
                     String image = rs.getString("image");
                     p = new Product(id, name, price,image);
                 }

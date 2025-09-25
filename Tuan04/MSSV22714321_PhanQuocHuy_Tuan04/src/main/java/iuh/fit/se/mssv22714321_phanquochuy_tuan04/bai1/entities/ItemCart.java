@@ -6,34 +6,34 @@ import lombok.*;
  * @author: QUOC HUY
  * @date: 18/09/2025
  */
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ItemCart {
     private Product product;
     private Integer quantity;
-
-    public ItemCart() {
-    }
-
-    public ItemCart(Product product, Integer quantity) {
-        this.product = product;
-        this.quantity = quantity;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
+//
+//    public ItemCart() {
+//    }
+//
+//    public ItemCart(Product product, Integer quantity) {
+//        this.product = product;
+//        this.quantity = quantity;
+//    }
+//
+//    public Product getProduct() {
+//        return product;
+//    }
+//
+//    public void setProduct(Product product) {
+//        this.product = product;
+//    }
+//
+//    public Integer getQuantity() {
+//        return quantity;
+//    }
+//
+//    public void setQuantity(Integer quantity) {
+//        this.quantity = quantity;
+//    }
 }
